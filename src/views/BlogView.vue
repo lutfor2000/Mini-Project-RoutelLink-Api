@@ -20,7 +20,7 @@ onBeforeMount(async () =>{
 
 const loadMore = () =>{
     offset.value += limit;
-    const nextPosts = allPost.value.slice(offset.value, offset.value + limit);
+    const nextPosts = allPost.value.slice(offset.value, offset.value + limit) ;
     posts.value = [...posts.value, ...nextPosts];
 }
 

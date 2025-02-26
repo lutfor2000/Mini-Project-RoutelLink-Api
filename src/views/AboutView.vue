@@ -1,5 +1,6 @@
 <script setup>
-
+ import {team} from '../data/team.js'
+ console.log(team);
 </script>
 
 <template>
@@ -18,34 +19,35 @@
                 <h2 class="text-2xl font-bold text-gray-800 mb-6">Our Team</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Team Member 1 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                        <img src="https://picsum.photos/400/400?random=1" alt="Team member" class="w-full h-64 object-cover">
+                    <div v-for="(parson,index ) in team" class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img :src="`https://picsum.photos/400/400?random=${index}`" alt="Team member" class="w-full h-64 object-cover">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">John Doe</h3>
-                            <p class="text-gray-600 mb-4">Founder & Lead Developer</p>
-                            <p class="text-gray-600">Passionate about creating innovative solutions and sharing knowledge with the community.</p>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ parson.name }}</h3>
+                            <p class="text-gray-600 mb-4">{{ parson.title }}</p>
+                            <p class="text-gray-600">{{ parson.about }}</p>
                         </div>
                     </div>
 
                     <!-- Team Member 2 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <!-- <div class="bg-white rounded-lg shadow-md overflow-hidden">
                         <img src="https://picsum.photos/400/400?random=2" alt="Team member" class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold text-gray-800 mb-2">Jane Smith</h3>
                             <p class="text-gray-600 mb-4">Senior UI/UX Designer</p>
                             <p class="text-gray-600">Expert in creating beautiful and user-friendly interfaces that delight users.</p>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Team Member 3 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <!-- <div class="bg-white rounded-lg shadow-md overflow-hidden">
                         <img src="https://picsum.photos/400/400?random=3" alt="Team member" class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold text-gray-800 mb-2">Mike Johnson</h3>
                             <p class="text-gray-600 mb-4">Content Strategist</p>
                             <p class="text-gray-600">Crafting engaging content and building meaningful connections with our readers.</p>
                         </div>
-                    </div>
+                    </div> -->
+                    
                 </div>
             </section>
         </main>
