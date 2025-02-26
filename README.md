@@ -1,5 +1,6 @@
 # vue-route
-![image](https://github.com/user-attachments/assets/5ba9630a-ba7e-4658-9837-0c8daaac8a8a)
+![image](https://github.com/user-attachments/assets/866ac5b6-a0ec-4190-8a58-d81d584bc03e)
+
 
 
 
